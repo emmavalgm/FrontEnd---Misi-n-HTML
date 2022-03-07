@@ -1,0 +1,176 @@
+<!-- GMMEV -->
+<!DOCTYPE html>  
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Emma's Bakery</title> 
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: rgb(238, 159, 205);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: rgba(26, 21, 24, 0.651);
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Emma's Bakery</h1>
+    </header>
+
+    <img src="LogoE.jpeg" alt="Emma's Bakery" width="350px" height="350px" >
+
+    <p>Bienvenid@ a Emma's Bakery</p>
+    <p>Conoce nuestro menú y deleita tu paladar. <br> Contamos con pasteles de diferentes sabores. Además, podrás decorarlos como tu quieras.</p>
+
+    <hr>
+
+    <dl>
+
+        <img src="Pastel1.jpg" alt="Pastel" width="350px" height="350px" >
+        <dt><h3>Pasteles:</h3></dt>
+        <dd>-Pastel helado de Oreo $350.00</dd>
+        <dd>-Pastel arcoiris $360.00</dd>
+        <dd>-Pastel fresa $370.00</dd>
+        <dd>-Pastel Tiramisú $370.00</dd>
+        <dd>-Pastel moka $375.00</dd>
+        <dd>-Pastel durazno $375.00</dd>
+        <dd>-Pastel chocolate $375.00</dd>
+        <dd>-Pastel nuez $375.00</dd>
+        <dd>-Pastel red velvet $380.00</dd>
+        <dd>-Pastel zanahoria $395.00</dd>
+        
+        <br>
+
+        <img src="Fondant.jpg" alt="Fondant" width="350px" height="250px" >
+        <dt><h3>Decoración con Fondant:</h3></dt>
+        <dd>-Personalizado 15cm $100.00</dd>
+        <dd>-Personalizado 30cm $150.00</dd>
+        <dd>-Todo el pastel $180.00</dd>
+
+        <br>
+
+        <img src="fruts.jpg" alt="Frutas" width="350px" height="250px" >
+        <dt><h3>Aditamentos (Fruta(s) a elegir: Fresa, mango, durazno, kiwi, cereza, piña y zanahoria):</h3></dt>
+        <dd>-1 fruta extra $50.00</dd>
+        <dd>-3 frutas extras $80.00</dd>
+        <dd>-5 o más frutas $180.00 *Costo extra de $20.00 a partir de la sexta fruta</dd>
+
+        <br>
+
+        <img src="adornos.jpg" alt="Adornos" width="350px" height="250px" >
+        <dt><h3>Adornos:</h3></dt>
+        <dd>-Adorno personalizado 15cm $100.00</dd>
+        <dd>-Adorno personalizado 30cm $150.00</dd>
+        <dd>-Adorno acrílico $80.00</dd>
+        <dd>-Adorno acrílico personalizado 15cm $100.00</dd>
+        <dd>-Adorno acrílico personalizado 30cm $115.00</dd>
+    </dl>
+
+    <hr>
+    <p>Si desea hacer algún pedido, favor de llenar el siguiente formulario:</p>
+ 
+    <h2>Pedido</h2>
+
+    <form action="/accion.js" id="form1" method="post">
+
+        <label for="nombre" >Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="tel1">Teléfono:</label><br>
+        <input type="tel" id="tel1" name="tel1" maxlength="10"><br><br>
+
+        <label for="correo1">Correo electrónico:</label><br>
+        <input type="email" id="correo1" name="correo1"><br><br>
+    
+        <label for="input1">Descripción general del pastel:</label><br>
+        <input type="text" id="input1" name="input1"><br><br>
+
+        <h3>Extra:</h3>
+        <label for="input1">Favor de seleccionar los extras</label><br>
+    
+        <h4>Extras Fondant:</h4>
+        <input type="radio" id="personalizado15cm" name="fondant" value="Personalizado 15cm">
+        <label for="personalizado15cm">Personalizado 15cm</label><br>
+
+        <input type="radio" id="personalizado30cm" name="fondant" value="Personalizado 30cm">
+        <label for="personalizado30cm">Personalizado 30cm</label><br>
+
+        <input type="radio" id="todopastel" name="fondant" value="Todo el pastel">
+        <label for="todopastel">Todo el pastel</label><br><br>
+
+        <h4>Extras aditamentos:</h4>
+        <input type="radio" id="1fruta" name="aditamentos" value="1 fruta">
+        <label for="1fruta">1 fruta extra</label><br>
+
+        <input type="radio" id="3frutas" name="aditamentos" value="3 frutas">
+        <label for="3frutas">3 frutas extras</label><br>
+
+        <input type="radio" id="5frutas" name="aditamentos" value="5 frutas o más">
+        <label for="5frutas">5 frutas o más extras</label><br><br>
+
+        <label for="sabores" >Que fruta(s) desea agregar?:</label><br>
+        <input type="text" id="sabores" name="sabores"><br><br>
+
+        <h4>Extras adornos:</h4>
+        <input type="radio" id="per15cm" name="adornos" value="Personalizado 15cm">
+        <label for="per15cm">Adorno personalizado extra 15cm</label><br>
+
+        <input type="radio" id="per30cm" name="adornos" value="Personalizado 30cm">
+        <label for="per30cm">Adorno personalizado extra 30cm</label><br>
+
+        <input type="radio" id="acrilico" name="adornos" value="Acrílico">
+        <label for="acrilico">Adorno acrílico extra</label><br>
+
+        <input type="radio" id="aper15cm" name="adornos" value="Acrílico personalizado 15cm">
+        <label for="aper15cm">Adorno acrílico personalizado extra 15cm</label><br>
+
+        <input type="radio" id="aper30cm" name="adornos" value="Acrílico personalizado 30cm">
+        <label for="aper30cm">Adorno acrílico personalizado extra 30cm</label><br><br>
+
+        <label for="adorno" >Descripción del adorno:</label><br>
+        <input type="text" id="adorno" name="adorno"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+
+    <hr>
+
+    <p>Dirección: Av. Chapultepec, #24 A, Colonia Chapultepec</p>
+    <p>Teléfono: 3365897520</p>
+    <p>Horario: 10:00 AM - 09:00 PM</p>
+    <hr>
+
+    <body style="background-color: #F08080;">
+</body>
+</html>
